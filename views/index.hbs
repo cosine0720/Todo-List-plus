@@ -3,11 +3,13 @@
   <li class="list-group-item">
     <div class="row">
       <div class="col-auto me-auto">
-        <input style="vertical-align: middle;" type="checkbox" name="isDone" {{#if this.isDone }} checked {{/if}}
-          disabled>
-        <h4 style="display: inline; vertical-align: middle;">
-          {{ this.name }}
-        </h4>
+        <input style="vertical-align: middle;" type="checkbox" name="isDone" 
+          {{#if this.isDone }} checked {{/if}} disabled >
+        <h5 style="display: inline; vertical-align: middle; 
+          {{#if this.isDone }} text-decoration: line-through rgba(55, 53, 47, 0.25); {{/if}}" 
+          class="mx-2 font-monospace {{#if this.isDone }} text-muted {{/if}} " >
+           {{ this.name }}
+        </h5>
       </div>
       <div class="col-auto">
         <a class="btn btn-secondary" href="./todos/{{ this._id }}">detail</a>
